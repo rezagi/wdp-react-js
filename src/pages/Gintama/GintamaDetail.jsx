@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom"; 
 import Button from "../../components/Button/Button";
@@ -13,7 +13,7 @@ const GintamaDetail = () => {
 	useEffect(() => {
 		fetch(`https://api.jikan.moe/v4/anime/${params.mal_id}`)
 			.then((response) => response.json())
-			.then((data) => setData(data));
+			.then((res) => setData(res));
 	}, [params]);
 
 	return (
@@ -31,7 +31,7 @@ const GintamaDetail = () => {
 						<Link to = "/gintama" >
 							<Button text={'Back'} />
 						</Link>
-						<a href={data.data.url} target="_blank" class="px-5">
+						<a href={data.data.url} target="_blank" rel="noreferrer" class="px-5">
 							<Button text={'More Detail'} />
 						</a> <br/>
 					</div>				
