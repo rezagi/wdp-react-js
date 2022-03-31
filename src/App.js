@@ -12,12 +12,7 @@ import GundamDetail from "./pages/Gundam/GundamDetail";
 import ButtonNav from "./components/Button/ButtonNav";
 
 function App() {
-	const [darkMode, setDarkMode] = useState(false);
 
-	const handleDarkMode = () => {
-		setDarkMode(!darkMode);
-	};
-	
     function selectNew() {
         var newL = document.getElementById("list");
         newL.classList.toggle("hidden");
