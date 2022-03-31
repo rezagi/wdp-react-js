@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Main from "./pages/Main";
 import { Routes, Route, Link } from "react-router-dom";
 import GintamaList from "./pages/Gintama/GintamaList";
